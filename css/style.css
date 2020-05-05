@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  /* font-size: 10px; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+  margin: 32px;
+}
+
+.logo span {
+  font-family: "Homemade Apple", cursive;
+}
+
+header nav {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.3s ease-in-out;
+}
+
+header nav.open {
+  left: 0;
+}
+header nav ul {
+  width: 100%;
+}
+header nav ul li {
+  list-style: none;
+  padding: 32px 16px;
+  width: 100%;
+  text-align: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+
+  color: #000;
+}
+
+.active {
+  color: red;
+}
+
+header .button {
+  margin: 0 auto;
+}
+
+.findgift {
+  background: #f1f1f2;
+  background-image: url(/img/img1people.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.findgift img {
+  display: none;
+}
+
+.findgift .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+
+  align-items: center;
+  background-color: #f1f1f280;
+  background-clip: border-box;
+  z-index: 1;
+}
+
+.findgiftnow {
+  width: auto;
+  max-width: 433px;
+  height: 411px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+.about {
+  background: #f1f1f2;
+  background-image: url(/img/imgthx.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.about img {
+  display: none;
+}
+
+.about .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+
+  align-items: center;
+  background-color: #f1f1f291;
+  background-clip: border-box;
+  z-index: 1;
+}
+
+.how_work {
+  max-width: 441px;
+  width: auto;
+  height: 411px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+  color: #000000;
+}
+
+.h2 {
+  font-size: 45px;
+  line-height: 140.62%;
+  /* identical to box height, or 45px */
+
+  color: #000000;
+}
+p {
+  padding: 16px 0;
+  font-size: 1em;
+  line-height: 140.62%;
+  /* or 28px */
+
+  color: #000000;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #f7941e;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f7941e;
+  border-radius: 5px;
+}
+
+.button.button_primary {
+  color: white;
+  background-color: #f7941e;
+}
+
+.burger-button {
+  position: absolute;
+  top: 56px;
+  left: 16px;
+  border: none;
+  height: 2px;
+  width: 32px;
+  background-color: #000;
+  z-index: 999;
+}
+
+.burger-button:before,
+.burger-button:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 32px;
+  background-color: #000;
+  left: 0;
+}
+
+.burger-button:before {
+  top: -8px;
+}
+
+.burger-button:after {
+  bottom: -8px;
+}
+
+.burger-button.opened {
+  transform: rotate(45deg);
+  position: fixed;
+}
+
+.burger-button.opened:before {
+  top: 0;
+}
+
+.burger-button.opened:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+@media screen and (min-width: 425px) {
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 40px;
+    flex-wrap: nowrap;
+  }
+
+  header .logo {
+    width: auto;
+  }
+  header .button {
+    margin: 0;
+  }
+  header nav {
+    display: block;
+    position: static;
+    width: auto;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    width: max-content;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 69px;
+    color: #000000;
+  }
+
+  .findgiftnow {
+    width: 720px;
+    max-width: none;
+    height: auto;
+    padding: 154px 126px 135px 162px;
+  }
+
+  p {
+    max-width: none;
+    padding: 36px 0;
+    font-size: 20px;
+    line-height: 140.62%;
+    /* or 28px */
+
+    color: #000000;
+  }
+
+  .how_work {
+    width: 720px;
+    max-width: none;
+    height: auto;
+    padding: 154px 126px 135px 162px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    padding: 0 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .findgift img {
+    display: block;
+  }
+
+  .findgift .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: none;
+    background: #f1f1f2;
+  }
+
+  .findgiftnow {
+    width: 720px;
+    padding: 154px 126px 135px 162px;
+    text-align: start;
+    align-items: flex-start;
+  }
+
+  .about img {
+    display: block;
+  }
+
+  .about .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: none;
+    background: #f1f1f2;
+  }
+
+  .how_work {
+    width: 720px;
+    padding: 154px 126px 135px 162px;
+    text-align: start;
+    align-items: flex-start;
+  }
+
+  .how_work .button.button_primary {
+    background: none;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #f7941e;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f7941e;
+    border-radius: 5px;
+  }
+}

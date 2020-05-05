@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><span>Logo</span></div>
+      <button class="burger-button" id="openMenu"></button>
+      <nav id="headerMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="button">Gift Finder</a>
+    </header>
+
+    <section class="findgift">
+      <div class="wrapper">
+        <div class="findgiftnow">
+          <h1>Find a gift for your wife or girlfriend</h1>
+          <p>
+            Struggling to find a gift for your wife or girlfriend? No problem!
+          </p>
+
+          <div class="button button_primary">
+            Find gift now
+          </div>
+        </div>
+
+        <div class="peopleimg">
+          <img src="/img/img1people.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="wrapper">
+        <div class="thximg">
+          <img src="/img/imgthx.png" alt="" />
+        </div>
+        <div class="how_work">
+          <h2>How we work</h2>
+          <p>
+            We’ve actually already asked hundreds of women what they want, and
+            made a database with the results. All you have to do is take our
+            short survey that only takes seconds, and our proprietary algorithm
+            will match you with a few perfect gift options.
+          </p>
+
+          <div class="button button_primary">
+            Learn More
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const btn = document.getElementById("openMenu");
+      const menu = document.getElementById("headerMenu");
+
+      btn.addEventListener("click", (event) => {
+        menu.classList.toggle("open");
+        btn.classList.toggle("opened");
+      });
+    </script>
+  </body>
+</html>
