@@ -139,24 +139,82 @@ header .button {
   text-align: start;
 }
 
+p {
+  margin: 15px auto 15px;
+}
+
 h1 {
   font-size: 2em;
   line-height: 1.2em;
   color: #000000;
 }
 
-.h2 {
-  font-size: 45px;
-  line-height: 140.62%;
+h2 {
+  font-size: 24px;
+
   /* identical to box height, or 45px */
 
   color: #000000;
 }
-p {
-  padding: 16px 0;
-  font-size: 1em;
-  line-height: 140.62%;
-  /* or 28px */
+
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.gifthover .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hovertitle {
+  margin: 96px auto 64px;
+  font-size: 18px;
+  line-height: 135.94%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+
+  color: #000000;
+}
+
+.options {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.option {
+  margin: 30px auto;
+  background: #fafafa;
+}
+
+.option-type {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.option:hover {
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.option-type a {
+  margin-top: 74px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
 
   color: #000000;
 }
@@ -220,126 +278,137 @@ p {
 }
 
 @media screen and (min-width: 425px) {
-}
-
-@media screen and (min-width: 768px) {
-  header {
-    padding: 0 40px;
-    flex-wrap: nowrap;
+  .option:nth-child(n) {
+    margin-right: 15px;
   }
 
-  header .logo {
-    width: auto;
-  }
-  header .button {
-    margin: 0;
-  }
-  header nav {
-    display: block;
-    position: static;
-    width: auto;
-    top: 0;
-    left: 0;
-    /* background-color: white; */
+  .option:nth-child(n + 1) {
+    margin-left: 15px;
   }
 
-  header nav ul {
-    display: flex;
-    justify-content: center;
+  @media screen and (min-width: 768px) {
+    header {
+      padding: 0 40px;
+      flex-wrap: nowrap;
+    }
+
+    header .logo {
+      width: auto;
+    }
+    header .button {
+      margin: 0;
+    }
+    header nav {
+      display: block;
+      position: static;
+      width: auto;
+      top: 0;
+      left: 0;
+      /* background-color: white; */
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav ul li {
+      width: max-content;
+    }
+
+    .burger-button {
+      display: none;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 69px;
+      color: #000000;
+    }
+
+    .findgiftnow {
+      width: 720px;
+      max-width: none;
+      height: auto;
+      padding: 154px 126px 135px 162px;
+    }
+
+    p {
+      max-width: none;
+
+      font-size: 20px;
+      line-height: 140.62%;
+      /* or 28px */
+
+      color: #000000;
+    }
+
+    .how_work {
+      width: 720px;
+      max-width: none;
+      height: auto;
+      padding: 154px 126px 135px 162px;
+    }
   }
 
-  header nav ul li {
-    width: max-content;
+  @media screen and (min-width: 992px) {
+    header {
+      padding: 0 80px;
+    }
   }
 
-  .burger-button {
-    display: none;
-  }
-
-  h1 {
-    font-size: 56px;
-    line-height: 69px;
-    color: #000000;
-  }
-
-  .findgiftnow {
-    width: 720px;
-    max-width: none;
-    height: auto;
-    padding: 154px 126px 135px 162px;
-  }
-
-  p {
-    max-width: none;
-    padding: 36px 0;
-    font-size: 20px;
-    line-height: 140.62%;
-    /* or 28px */
-
-    color: #000000;
-  }
-
-  .how_work {
-    width: 720px;
-    max-width: none;
-    height: auto;
-    padding: 154px 126px 135px 162px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  header {
-    padding: 0 80px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .findgift img {
-    display: block;
-  }
-
-  .findgift .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  @media screen and (min-width: 1440px) {
+    /* .findgift {
     background-image: none;
-    background: #f1f1f2;
-  }
+  } */
+    .findgift img {
+      display: block;
+    }
 
-  .findgiftnow {
-    width: 720px;
-    padding: 154px 126px 135px 162px;
-    text-align: start;
-    align-items: flex-start;
-  }
+    .findgift .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-image: none;
+      background: #f1f1f2;
+    }
 
-  .about img {
-    display: block;
-  }
+    .findgiftnow {
+      width: 720px;
+      padding: 154px 126px 135px 162px;
+      text-align: start;
+      align-items: flex-start;
+    }
 
-  .about .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-image: none;
-    background: #f1f1f2;
-  }
+    .about {
+      background-image: none;
+    }
+    .about img {
+      display: block;
+    }
 
-  .how_work {
-    width: 720px;
-    padding: 154px 126px 135px 162px;
-    text-align: start;
-    align-items: flex-start;
-  }
+    .about .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-image: none;
+      background: #f1f1f2;
+    }
 
-  .how_work .button.button_primary {
-    background: none;
-    display: inline-block;
-    padding: 12px 24px;
-    border: 1px solid #f7941e;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #f7941e;
-    border-radius: 5px;
+    .how_work {
+      width: 720px;
+      padding: 154px 126px 135px 162px;
+      text-align: start;
+      align-items: flex-start;
+    }
+
+    .how_work .button.button_primary {
+      background: none;
+      color: #f7941e;
+    }
+
+    .option {
+      margin: 0;
+    }
   }
 }
