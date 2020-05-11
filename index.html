@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
@@ -98,9 +99,128 @@
             </div>
           </div>
         </div>
+        <div class="slider">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="option">
+                    <img src="/img/imgbirthday.png" alt="" />
+                    <div class="option-type">
+                      <span>Birthday</span>
+                      <a href="#">See More ></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="option">
+                    <img src="/img/imganniversary.png" alt="" />
+                    <div class="option-type">
+                      <span>Anniversary</span>
+                      <a href="#">See More ></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="option">
+                    <img src="/img/imgvalentine.png" alt="" />
+                    <div class="option-type">
+                      <span>Valentine's Day</span>
+                      <a href="#">See More ></a>
+                    </div>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="option">
+                    <img src="/img/imgxmas.png" alt="" />
+                    <div class="option-type">
+                      <span>Christmas</span>
+                      <a href="#">See More ></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <section class="contact">
+      <div class="wrapper">
+        <div class="contacts">
+          <div class="head">
+            <h2>Ready to get started?</h2>
+            <p>Sign up or contact us</p>
+          </div>
+          <div class="buttons">
+            <a href="#" class="button button_primary">Find gift now</a>
+            <a href="#" class="button">how it works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="wrapper">
+        <div class="title">
+          <h2>Our Best Blogs Ever</h2>
+          <p>
+            “Try our blog to find the best tips and tricks to select your gift”
+          </p>
+        </div>
+        <div class="blog__primary">
+          <div class="image">
+            <img src="/img/imgblog.png" alt="" />
+          </div>
+          <div class="primary__text">
+            <p>Mr. John Doe</p>
+            <h2>The best way to wish your wife</h2>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <div class="blogs">
+          <div class="blog__secondary">
+            <h4>Database to find the gifts for your girlfriend</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore...
+            </p>
+            <a href="#"></a>
+          </div>
+          <div class="blog__secondary">
+            <h4>
+              How Artificial Intelligence read your mind to find the best gift
+            </h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore...
+            </p>
+            <a href="#"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/glide.min.js"></script>
     <script>
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 0,
+        perView: 4,
+        breakpoints: {
+          // 1200: {
+          //   perView: 4,
+          // },
+          1439: {
+            perView: 3,
+          },
+          997: {
+            perView: 2,
+          },
+          767: {
+            perView: 1,
+          },
+        },
+      }).mount();
+
       const btn = document.getElementById("openMenu");
       const menu = document.getElementById("headerMenu");
 

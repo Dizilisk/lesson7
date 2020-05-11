@@ -182,15 +182,28 @@ h3 {
   color: #000000;
 }
 
-.options {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+.gifthover .options {
+  display: none;
 }
 
-.option {
-  margin: 30px auto;
+.slider {
+  width: 100%;
+}
+
+.glide__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.glide .option {
+  margin: 40px 0;
   background: #fafafa;
+}
+
+.glide__slide--active .option {
+  background-color: white;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  z-index: 3;
 }
 
 .option-type {
@@ -217,6 +230,28 @@ h3 {
   line-height: 19px;
 
   color: #000000;
+}
+
+.contact {
+  background-color: #f7941e;
+}
+.contacts {
+  padding: 81px 15px 69px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons a {
+  margin: 10px 0;
 }
 
 .button {
@@ -277,138 +312,205 @@ h3 {
   bottom: 0;
 }
 
+.buttons .button {
+  border-color: black;
+  color: #000;
+}
+
+.buttons .button.button_primary {
+  background-color: black;
+  color: #fff;
+}
+
 @media screen and (min-width: 425px) {
-  .option:nth-child(n) {
-    margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 40px;
+    flex-wrap: nowrap;
   }
 
-  .option:nth-child(n + 1) {
-    margin-left: 15px;
+  header .logo {
+    width: auto;
+  }
+  header .button {
+    margin: 0;
+  }
+  header nav {
+    display: block;
+    position: static;
+    width: auto;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
   }
 
-  @media screen and (min-width: 768px) {
-    header {
-      padding: 0 40px;
-      flex-wrap: nowrap;
-    }
-
-    header .logo {
-      width: auto;
-    }
-    header .button {
-      margin: 0;
-    }
-    header nav {
-      display: block;
-      position: static;
-      width: auto;
-      top: 0;
-      left: 0;
-      /* background-color: white; */
-    }
-
-    header nav ul {
-      display: flex;
-      justify-content: center;
-    }
-
-    header nav ul li {
-      width: max-content;
-    }
-
-    .burger-button {
-      display: none;
-    }
-
-    h1 {
-      font-size: 56px;
-      line-height: 69px;
-      color: #000000;
-    }
-
-    .findgiftnow {
-      width: 720px;
-      max-width: none;
-      height: auto;
-      padding: 154px 126px 135px 162px;
-    }
-
-    p {
-      max-width: none;
-
-      font-size: 20px;
-      line-height: 140.62%;
-      /* or 28px */
-
-      color: #000000;
-    }
-
-    .how_work {
-      width: 720px;
-      max-width: none;
-      height: auto;
-      padding: 154px 126px 135px 162px;
-    }
+  header nav ul {
+    display: flex;
+    justify-content: center;
   }
 
-  @media screen and (min-width: 992px) {
-    header {
-      padding: 0 80px;
-    }
+  header nav ul li {
+    width: max-content;
   }
 
-  @media screen and (min-width: 1440px) {
-    /* .findgift {
+  .burger-button {
+    display: none;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 69px;
+    color: #000000;
+  }
+
+  .findgiftnow {
+    width: 720px;
+    max-width: none;
+    height: auto;
+    padding: 154px 126px 135px 162px;
+  }
+
+  p {
+    max-width: none;
+
+    font-size: 20px;
+    line-height: 140.62%;
+    /* or 28px */
+
+    color: #000000;
+  }
+
+  .how_work {
+    width: 720px;
+    max-width: none;
+    height: auto;
+    padding: 154px 126px 135px 162px;
+  }
+
+  .option {
+    /* margin: 30px auto; */
+    background: #fafafa;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .buttons a {
+    margin: 25px 15px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    padding: 0 80px;
+  }
+
+  .contacts {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 81px 50px 69px;
+  }
+
+  .contacts h2,
+  p {
+    text-align: start;
+    font-size: 32px;
+    line-height: 140.62%;
+    /* identical to box height, or 45px */
+
+    color: #000000;
+  }
+
+  .buttons a {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* .findgift {
     background-image: none;
   } */
-    .findgift img {
-      display: block;
-    }
+  .findgift img {
+    display: block;
+  }
 
-    .findgift .wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      background-image: none;
-      background: #f1f1f2;
-    }
+  .findgift .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: none;
+    background: #f1f1f2;
+  }
 
-    .findgiftnow {
-      width: 720px;
-      padding: 154px 126px 135px 162px;
-      text-align: start;
-      align-items: flex-start;
-    }
+  .findgiftnow {
+    width: 720px;
+    padding: 154px 126px 135px 162px;
+    text-align: start;
+    align-items: flex-start;
+  }
 
-    .about {
-      background-image: none;
-    }
-    .about img {
-      display: block;
-    }
+  .about {
+    background-image: none;
+  }
+  .about img {
+    display: block;
+  }
 
-    .about .wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      background-image: none;
-      background: #f1f1f2;
-    }
+  .about .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: none;
+    background: #f1f1f2;
+  }
 
-    .how_work {
-      width: 720px;
-      padding: 154px 126px 135px 162px;
-      text-align: start;
-      align-items: flex-start;
-    }
+  .how_work {
+    width: 720px;
+    padding: 154px 126px 135px 162px;
+    text-align: start;
+    align-items: flex-start;
+  }
 
-    .how_work .button.button_primary {
-      background: none;
-      color: #f7941e;
-    }
+  .how_work .button.button_primary {
+    background: none;
+    color: #f7941e;
+  }
 
-    .option {
-      margin: 0;
-    }
+  .slider {
+    display: none;
+  }
+
+  .gifthover .options {
+    display: grid;
+  }
+
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-column-gap: 30px;
+    /* flex-flow: row wrap; */
+    /* justify-content: space-around; */
+    padding-bottom: 80px;
+  }
+
+  .option {
+    margin: 0;
+  }
+
+  .contacts {
+    justify-content: center;
+  }
+
+  .head {
+    margin-right: 115px;
+  }
+
+  .buttons {
+    margin-left: 115px;
   }
 }
